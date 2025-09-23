@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PORTAL DO BENEFICIÁRIO — HF Saúde e Bem-Estar</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome e Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-poppins bg-gray-50 text-green-800 antialiased">
+
+  <!-- Preloader -->
+  <div id="preloader" class="fixed inset-0 bg-white z-50 flex items-center justify-center">
+    <div class="loader" aria-hidden="true"></div>
+    <span class="sr-only">Carregando...</span>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-white shadow sticky top-0 z-40">
+    <div class="container mx-auto px-6 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3" aria-label="Ir para o topo">
+        <div class="w-10 h-10 rounded-full bg-green-700 flex items-center justify-center text-white text-xl">
+          <i class="fas fa-leaf" aria-hidden="true"></i>
+        </div>
+        <div>
+          <h1 class="text-lg font-bold text-green-700 tracking-wide">PORTAL DO BENEFICIÁRIO</h1>
+          <p class="text-xs text-gray-500 -mt-1">HF Saúde e Bem-Estar</p>
+        </div>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex items-center gap-6" aria-label="Menu principal">
+        <a href="#planos" class="nav-link">Planos</a>
+        <a href="#servicos" class="nav-link">Serviços</a>
+        <a href="#acesso" class="nav-link">Acesso Rápido</a>
+        <a href="#contato" class="nav-link">Contato</a>
+        <a href="https://wa.me/551151044247" class="ml-4 btn-primary inline-flex items-center gap-2" target="_blank" rel="noopener">Fale Conosco <i class="fab fa-whatsapp"></i></a>
+      </nav>
+
+      <!-- Mobile toggle -->
+      <button id="menu-btn" class="md:hidden p-2 text-green-700" aria-expanded="false" aria-label="Abrir menu">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <nav id="mobile-menu" class="hidden md:hidden bg-white border-t shadow-sm">
+      <div class="px-6 py-4 flex flex-col gap-3">
+        <a href="#planos" class="mobile-link">Planos</a>
+        <a href="#servicos" class="mobile-link">Serviços</a>
+        <a href="#acesso" class="mobile-link">Acesso Rápido</a>
+        <a href="#contato" class="mobile-link">Contato</a>
+        <a href="https://wa.me/551151044247" class="btn-primary w-full text-center" target="_blank" rel="noopener">Fale por WhatsApp</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero relative overflow-hidden">
+      <div class="container mx-auto px-6 py-16 grid md:grid-cols-2 gap-8 items-center">
+        <div class="order-2 md:order-1">
+          <p class="inline-block px-3 py-1 rounded-full bg-green-100 text-green-700 font-semibold text-sm">+10 anos de experiência</p>
+          <h2 class="mt-6 text-3xl md:text-5xl font-extrabold leading-tight text-green-800">Seu cuidado, nossa prioridade — atendimento com atenção e carinho</h2>
+          <p class="mt-4 text-gray-700 max-w-xl">Planos de saúde que acompanham você e sua família, com atendimento rápido, rede credenciada e suporte por WhatsApp.</p>
+
+          <div class="mt-6 flex flex-col sm:flex-row gap-3">
+            <a href="https://wa.me/551151044247?text=Olá,%20gostaria%20de%20conhecer%20os%20planos" class="btn-primary btn-lg inline-flex items-center gap-2">
+              Fale Conosco <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://wa.me/551151044247?text=Olá,%20tenho%20um%20problema%20com%20minha%20mensalidade" class="btn-secondary btn-lg inline-flex items-center gap-2">
+              Mensalidade em Atraso
+            </a>
+          </div>
+        </div>
+
+        <div class="order-1 md:order-2 flex justify-center md:justify-end">
+          <img src="medsenior.png" alt="Ilustração saúde" class="w-full max-w-md rounded-xl shadow-xl object-cover" loading="lazy">
+        </div>
+      </div>
+      <div class="absolute inset-0 pointer-events-none -z-10 hero-gradient"></div>
+    </section>
+
+    <!-- Acesso Rápido -->
+    <section id="acesso" class="py-16 px-6">
+      <div class="container mx-auto max-w-6xl">
+        <h3 class="text-2xl font-bold text-center text-green-700 mb-8">Acesso Rápido</h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- cards -->
+          <article class="card-access p-6 bg-white rounded-xl shadow-sm hover:shadow-lg transition">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-green-700 text-white flex items-center justify-center text-lg">
+                <i class="fas fa-file-invoice-dollar" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">2ª Via de Boleto</h4>
+                <p class="text-sm text-gray-500">Emita sua 2ª via de forma rápida.</p>
+              </div>
+            </div>
+            <a class="mt-4 btn-secondary block w-full text-center" href="https://wa.me/551151044247?text=Ol%C3%A1,%20gostaria%20da%202%C2%AA%20via%20do%20boleto">Solicitar</a>
+          </article>
+          <article class="card-access p-6 bg-white rounded-xl shadow-sm hover:shadow-lg transition">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-green-700 text-white flex items-center justify-center text-lg">
+                <i class="fas fa-clock" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">Regularizar Fatura</h4>
+                <p class="text-sm text-gray-500">Regularize sua fatura com atendimento ágil.</p>
+              </div>
+            </div>
+            <a class="mt-4 btn-secondary block w-full text-center" href="https://wa.me/551151044247">Regularizar</a>
+          </article>
+          <article class="card-access p-6 bg-white rounded-xl shadow-sm hover:shadow-lg transition">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-green-700 text-white flex items-center justify-center text-lg">
+                <i class="fas fa-plus-circle" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">Contratar Plano</h4>
+                <p class="text-sm text-gray-500">Escolha o plano ideal para você.</p>
+              </div>
+            </div>
+            <a class="mt-4 btn-secondary block w-full text-center" href="https://wa.me/551151044247">Contratar</a>
+          </article>
+          <article class="card-access p-6 bg-white rounded-xl shadow-sm hover:shadow-lg transition">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-green-700 text-white flex items-center justify-center text-lg">
+                <i class="fas fa-headset" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">Atendimento</h4>
+                <p class="text-sm text-gray-500">Fale com nosso suporte agora mesmo.</p>
+              </div>
+            </div>
+            <a class="mt-4 btn-secondary block w-full text-center" href="https://wa.me/551151044247">Falar Agora</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="py-16 px-6 bg-green-50">
+      <div class="container mx-auto max-w-6xl text-center">
+        <h3 class="text-2xl font-bold text-green-700 mb-8">Serviços Oferecidos</h3>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="service-card p-6 bg-white rounded-xl shadow-sm hover:shadow-lg transition">
+            <div class="mx-auto w-16 h-16 rounded-full bg-green-700 text-white flex items-center justify-center mb-4 text-2xl">
+              <i class="fas fa-stethoscope"></i>
+            </div>
+            <h4 class="font-semibold mb-2">Consultas Médicas</h4>
+            <p class="text-gray-600">Agende com rapidez e escolha o profissional ideal.</p>
+          </div>
+          <div class="service-card p-6 bg-white rounded-xl shadow-sm hover:shadow-lg transition">
+            <div class="mx-auto w-16 h-16 rounded-full bg-green-700 text-white flex items-center justify-center mb-4 text-2xl">
+              <i class="fas fa-vial"></i>
+            </div>
+            <h4 class="font-semibold mb-2">Exames</h4>
+            <p class="text-gray-600">Exames laboratoriais e de imagem com resultados digitais.</p>
+          </div>
+          <div class="service-card p-6 bg-white rounded-xl shadow-sm hover:shadow-lg transition">
+            <div class="mx-auto w-16 h-16 rounded-full bg-green-700 text-white flex items-center justify-center mb-4 text-2xl">
+              <i class="fas fa-user-nurse"></i>
+            </div>
+            <h4 class="font-semibold mb-2">Atendimento Domiciliar</h4>
+            <p class="text-gray-600">Conforto e cuidado no seu lar com profissionais qualificados.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Planos -->
+    <section id="planos" class="py-16 px-6">
+      <div class="container mx-auto max-w-6xl text-center">
+        <h3 class="text-2xl font-bold text-green-700 mb-8">Nossos Planos</h3>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="plan-card p-6 bg-white rounded-xl shadow-sm hover:shadow-lg transition">
+            <h4 class="font-semibold text-lg mb-2">Plano Básico</h4>
+            <p class="text-gray-600 mb-4">Atendimento essencial com ampla cobertura.</p>
+            <a href="https://wa.me/551151044247" class="btn-primary block">Contratar</a>
+          </div>
+          <div class="plan-card p-6 bg-white rounded-xl shadow-sm hover:shadow-lg transition">
+            <h4 class="font-semibold text-lg mb-2">Plano Premium</h4>
+            <p class="text-gray-600 mb-4">Mais serviços e prioridade em consultas.</p>
+            <a href="https://wa.me/551151044247" class="btn-primary block">Contratar</a>
+          </div>
+          <div class="plan-card p-6 bg-white rounded-xl shadow-sm hover:shadow-lg transition">
+            <h4 class="font-semibold text-lg mb-2">Plano Família</h4>
+            <p class="text-gray-600 mb-4">Cobertura completa para todos os membros da família.</p>
+            <a href="https://wa.me/551151044247" class="btn-primary block">Contratar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <!-- Contato -->
+<section id="contato" class="py-16 px-6 bg-green-50">
+  <div class="container mx-auto max-w-4xl">
+    <h3 class="text-2xl font-bold text-green-700 text-center mb-6">Fale Conosco</h3>
+    <p class="text-center text-gray-700 mb-6">Envie uma mensagem ou fale diretamente pelo WhatsApp.</p>
+
+    <div class="bg-white p-6 rounded-xl shadow-sm">
+      <form id="contact-form" class="grid grid-cols-1 gap-4">
+        <div class="grid sm:grid-cols-2 gap-4">
+          <input required name="name" type="text" placeholder="Seu nome" class="input">
+          <input required name="email" type="email" placeholder="Seu e-mail" class="input">
+        </div>
+        <textarea required name="message" rows="4" placeholder="Mensagem" class="input"></textarea>
+
+        <div class="flex gap-3 items-center">
+          <button type="submit" class="btn-primary">Enviar Mensagem</button>
+          <a href="https://wa.me/551151044247" target="_blank" rel="noopener" class="btn-secondary inline-flex items-center gap-2">
+            Falar por WhatsApp <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+
+        <p id="form-feedback" class="text-sm text-green-700 hidden">Mensagem enviada (simulada).</p>
+      </form>
+
+      <!-- Localização -->
+      <div class="mt-6">
+        <h4 class="font-semibold mb-2 text-green-700">Nosso Endereço</h4>
+        <p>Av. Celso Garcia, 4879 · 4007-2001</p>
+        <div class="map-container mt-4">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.123456789!2d-46.557!3d-23.524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8abcd1234%3A0x123456789abcd!2sAv.%20Celso%20Garcia%2C%204879%20-%20São%20Paulo!5e0!3m2!1spt-BR!2sbr!4v1234567890" 
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-green-700 text-white py-8 mt-16">
+    <div class="container mx-auto max-w-6xl text-center">
+      <p>&copy; 2025 HF Saúde e Bem-Estar. Todos os direitos reservados.</p>
+      <p>WhatsApp: <a href="https://wa.me/551151044247" class="underline">+55 11 5104-4247</a></p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Flutuante -->
+  <a href="https://wa.me/551151044247" class="whatsapp-floating fixed bottom-6 right-6 z-50 shadow-lg flex items-center justify-center rounded-full w-16 h-16 bg-green-700 text-white text-2xl" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script>
+    // Preloader
+    window.addEventListener('load', () => { document.getElementById('preloader').style.display = 'none'; });
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('hidden');
+      menuBtn.setAttribute('aria-expanded', !isOpen);
+    });
+  </script>
+
+</body>
+</html>
