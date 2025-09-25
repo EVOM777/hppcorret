@@ -63,37 +63,9 @@ body {
 }
 
 /* Hero */
-.hero {
-  background-color: var(--brand);  /* fundo verde principal */
-  color: white;                    /* textos brancos */
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+.hero-gradient {
+  background: linear-gradient(180deg, rgba(0, 255, 94, 0.08) 0%, rgba(255,255,255,0) 60%);
 }
-
-.hero h2 {
-  color: white;
-}
-
-.hero p {
-  color: #d1fae5; /* verde clarinho para subtítulo */
-}
-
-.hero a.btn-primary {
-  background: white;
-  color: var(--brand);
-}
-.hero a.btn-primary:hover {
-  background: #d1fae5;
-  color: var(--brand-600);
-}
-.hero a.btn-secondary {
-  color: white;
-  border-color: rgba(255,255,255,0.5);
-}
-.hero a.btn-secondary:hover {
-  background: rgba(255,255,255,0.1);
-}
-
 
 /* Cards */
 .card-access, .service-card, .plan-card {
