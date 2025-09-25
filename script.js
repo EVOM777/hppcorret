@@ -1,5 +1,10 @@
 /* script.js — interações: menu mobile, preloader, form simulado, links com smooth scroll */
 
+// Número do WhatsApp e mensagem pré-definida
+const WHATSAPP_NUMBER = "551151230692"; // novo número
+const WHATSAPP_MESSAGE = "Olá, gostaria de iniciar meu atendimento";
+const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+
 document.addEventListener("DOMContentLoaded", function () {
   // Preloader hide
   const preloader = document.getElementById("preloader");
@@ -34,6 +39,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
     });
+  });
+
+  // Atualizar todos os links de WhatsApp dinamicamente
+  document.querySelectorAll("a[href*='wa.me']").forEach(link => {
+    link.setAttribute("href", WHATSAPP_LINK);
   });
 
   // Contact form (simulated submission)
